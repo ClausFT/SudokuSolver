@@ -8,3 +8,5 @@ private const bool ManualInput = true; //false
 ```
 
 Predefined sudokus are located in Maps.cs
+
+![alt text](https://github.com/ClausFT/SudokuSolver/blob/master/SudokuSolver/Example.png?raw=true)
