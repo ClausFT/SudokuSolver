@@ -1,8 +1,8 @@
 # Sudoku Solver
 
-Simple C# implementation of a sudoku solver using candidate checking and backtracking (depth-first search) to solve sudokus.
+C# implementation of a sudoku solver using candidate checking and backtracking (depth-first search) strategies to solve sudokus.
 
-Set the 
+Set the "ManualInput" attribute in Program.cs to control whether to input a sudoku manually or to solve one of the predefined sudokus.
 ```
-ManualInput
+private const bool ManualInput = true; //false
 ```
