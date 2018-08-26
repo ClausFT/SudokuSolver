@@ -1,3 +1,8 @@
 # Sudoku Solver
 
-Simple implementation of a sudoku solver applying candidate checking and backtracking (depth-first search) to solve sudokus.
+Simple C# implementation of a sudoku solver using candidate checking and backtracking (depth-first search) to solve sudokus.
+
+Set the 
+```
+ManualInput
+```
