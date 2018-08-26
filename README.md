@@ -6,3 +6,5 @@ Set the "ManualInput" attribute in Program.cs to control whether to input a sudo
 ```
 private const bool ManualInput = true; //false
 ```
+
+Predefined sudokus are located in Maps.cs
