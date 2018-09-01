@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SudokuSolver.Entities;
 
 namespace SudokuSolver.Helpers
@@ -22,14 +23,14 @@ namespace SudokuSolver.Helpers
         public Map HandleInput()
         {
             var map = new Map();
-            Console.WriteLine("Enter map row by row: ");
+            Console.WriteLine("Enter map row by row (press Enter for empty cell): ");
             Console.WriteLine(map);
 
             while (!_isFinished)
             {
                 map = HandleKeyChar(Console.ReadKey());
                 Console.Clear();
-                Console.WriteLine("Enter map row by row: ");
+                Console.WriteLine("Enter map row by row (press Enter for empty cell): ");
                 Console.WriteLine(map);
             }
 
@@ -40,6 +41,9 @@ namespace SudokuSolver.Helpers
         {
             if (input.Key == ConsoleKey.Backspace)
             {
+                if (!_inputHistory.Any())
+                    return _currentMap;
+
                 _currentCoordinate = _currentCoordinate.GetPreviousCoordinate();
                 _currentMap = _inputHistory.Pop();
                 return _currentMap;
@@ -49,7 +53,11 @@ namespace SudokuSolver.Helpers
             if (input.Key == ConsoleKey.Enter)
                 value = 0;
             else
-                int.TryParse(input.KeyChar.ToString(), out value);
+            {
+                if (!int.TryParse(input.KeyChar.ToString(), out value))
+                    return _currentMap;
+            }
+                
 
             _inputHistory.Push(_currentMap.Clone());
             

@@ -18,12 +18,12 @@ namespace SudokuSolver
 
         static void Main(string[] args)
         {
-            var map = ManualInput ? new InputHelper().HandleInput() : MapFactory.Create(Maps.Hard2);
+            var map = ManualInput ? new InputHelper().HandleInput() : MapFactory.Create(Maps.Hard3);
 
             Console.Clear();
-            Console.WriteLine("Map to solve: ");
+            Console.WriteLine("Sudoku to solve: ");
             Console.WriteLine(map + "\n");
-
+            
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
@@ -40,7 +40,7 @@ namespace SudokuSolver
             }
             else
                 Console.WriteLine($"\nSudoku could not be solved ({stopwatch.ElapsedMilliseconds} ms)");
-
+    
             Console.ReadLine();
         }
     }

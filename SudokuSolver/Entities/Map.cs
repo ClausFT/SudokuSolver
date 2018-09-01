@@ -19,24 +19,26 @@ namespace SudokuSolver.Entities
         {
             var sb = new StringBuilder();
             var cursorPrinted = false;
+            bool firstRow = true;
             foreach (var row in Cells)
             {
-                sb.Append("+---+---+---+---+---+---+---+---+---+\n|");
+                sb.Append(firstRow ? "┌───┬───┬───┬───┬───┬───┬───┬───┬───┐\n│" : "├───┼───┼───┼───┼───┼───┼───┼───┼───┤\n│");
+                firstRow = false;
                 foreach (var cell in row)
                 {
                     if (cell == null && !cursorPrinted)
                     {
-                        sb.Append(" _ |");
+                        sb.Append(" _ │");
                         cursorPrinted = true;
                     }
                     else if (cell == null)
-                        sb.Append("   |");
+                        sb.Append("   │");
                     else
-                        sb.Append(cell.Number == 0 ? "   |" : $" {cell.Number} |");
+                        sb.Append(cell.Number == 0 ? "   │" : $" {cell.Number} │");
                 }
                 sb.Append("\n");
             }
-            sb.Append("+---+---+---+---+---+---+---+---+---+");
+            sb.Append("└───┴───┴───┴───┴───┴───┴───┴───┴───┘");
             return sb.ToString();
         }
         

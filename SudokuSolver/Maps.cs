@@ -2,7 +2,7 @@
 {
     public class Maps
     {
-        public static int[][] Map1 =>
+        public static int[][] Easy1 =>
             new[]
             {
                 new [] {9, 0, 0, 0, 5, 0, 0, 1, 0},
@@ -16,7 +16,7 @@
                 new [] {0, 2, 0, 0, 4, 0, 0, 0, 1}
             };
 
-        public static int[][] Easy1 =>
+        public static int[][] Easy2 =>
             new[]
             {
                 new [] {0, 0, 9, 0, 0, 2, 0, 0, 5},
@@ -58,7 +58,7 @@
                 new [] {0, 0, 0, 0, 0, 0, 5, 0, 0}
             };
 
-        public static int[][] Friendly =>
+        public static int[][] Hard3 =>
             new[]
             {
                 new [] {0, 0, 6, 0, 0, 8, 5, 0, 0},
@@ -70,6 +70,21 @@
                 new [] {1, 0, 7, 0, 5, 3, 0, 0, 0},
                 new [] {0, 5, 0, 0, 6, 4, 0, 0, 0},
                 new [] {3, 0, 0, 1, 0, 0, 0, 6, 0}
+            };
+
+        //https://www.telegraph.co.uk/news/science/science-news/9359579/Worlds-hardest-sudoku-can-you-crack-it.html
+        public static int[][] WorldsHardestSudoku =>
+            new[]
+            {
+                new [] {8, 0, 0, 0, 0, 0, 0, 0, 0},
+                new [] {0, 0, 3, 6, 0, 0, 0, 0, 0},
+                new [] {0, 7, 0, 0, 9, 0, 2, 0, 0},
+                new [] {0, 5, 0, 0, 0, 7, 0, 0, 0},
+                new [] {0, 0, 0, 0, 4, 5, 7, 0, 0},
+                new [] {0, 0, 0, 1, 0, 0, 0, 3, 0},
+                new [] {0, 0, 1, 0, 0, 0, 0, 6, 8},
+                new [] {0, 0, 8, 5, 0, 0, 0, 1, 0},
+                new [] {0, 9, 0, 0, 0, 0, 4, 0, 0}
             };
 
     }
