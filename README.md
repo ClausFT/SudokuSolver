@@ -7,6 +7,6 @@ Set the "ManualInput" attribute in Program.cs to control whether to input a sudo
 private const bool ManualInput = true; //false
 ```
 
-Screenshot:
+Example:
 
 ![alt text](https://github.com/ClausFT/SudokuSolver/blob/master/SudokuSolver/Example.png?raw=true)
